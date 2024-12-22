@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="34" android:compileSdkVersionCodename="14" android:sharedUserId="android.uid.phone" coreApp="true" package="vendor.qti.imsrcs" platformBuildVersionCode="34" platformBuildVersionName="14" versionCode="1" versionName="1.0">
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+    <application android:allowBackup="false" android:defaultToDeviceProtectedStorage="true" android:directBootAware="true" android:extractNativeLibs="false" android:persistent="true" android:process=".dataservices" android:usesNonSdkApi="true">
+        <uses-library android:name="vendor.qti.ims.connection-V1.0-java"/>
+        <uses-library android:name="vendor.qti.ims.factory-V2.2-java"/>
+        <uses-library android:name="vendor.qti.ims.rcsuce-V1.2-java"/>
+        <uses-library android:name="vendor.qti.ims.rcssip-V1.2-java"/>
+        <uses-library android:name="vendor.qti.ims.factoryaidlservice-V1-java"/>
+        <uses-library android:name="vendor.qti.ims.rcssipaidlservice-V1-java"/>
+        <uses-library android:name="vendor.qti.ims.rcsuceaidlservice-V1-java"/>
+        <uses-library android:name="vendor.qti.ims.connectionaidlservice-V1-java"/>
+        <service android:enabled="true" android:exported="true" android:name=".ImsRcsService" android:permission="android.permission.BIND_IMS_SERVICE" android:persistent="true" android:singleUser="true">
+            <meta-data android:name="android.telephony.ims.RCS_FEATURE" android:value="true"/>
+            <intent-filter>
+                <action android:name="android.telephony.ims.ImsService"/>
+            </intent-filter>
+        </service>
+    </application>
+</manifest>

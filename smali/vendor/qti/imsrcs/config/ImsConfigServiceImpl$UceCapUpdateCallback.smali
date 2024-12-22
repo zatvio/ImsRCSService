@@ -1,0 +1,30 @@
+.class public abstract Lvendor/qti/imsrcs/config/ImsConfigServiceImpl$UceCapUpdateCallback;
+.super Ljava/lang/Object;
+.source "ImsConfigServiceImpl.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lvendor/qti/imsrcs/config/ImsConfigServiceImpl;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x409
+    name = "UceCapUpdateCallback"
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 108
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public abstract onUceConfigStatusReceived(Landroid/telephony/ims/feature/RcsFeature$RcsImsCapabilities;)V
+.end method
